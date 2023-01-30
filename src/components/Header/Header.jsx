@@ -1,7 +1,11 @@
 import React from "react";
 import "./Header.scss";
-const Header = () => {
+const Header = ({setSearch}) => {
+  function inputSearch(text){
+      setSearch(text)
+  }
   return (
+    
     <header className="header">
       <div className="header__logo-block">
         <img src="images/logo.svg" alt="" className="header__logo" />
@@ -13,6 +17,7 @@ const Header = () => {
             type="text"
             className="header__input"
             placeholder="Search..."
+            onChange={(e)=>{inputSearch(e.target.value)}}
           />
           <img src="images/search.svg" alt="" className="header__search" />
         </div>
