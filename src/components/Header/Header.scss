@@ -1,0 +1,51 @@
+.header {
+  border-bottom: 1px solid #55473a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__logo {
+    max-width: 50px;
+    object-fit: cover;
+  }
+  &__title {
+    font-size: 1.5rem;
+  }
+  &__input-wrapper {
+    position: relative;
+  }
+  &__input {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid #55473a;
+    background-color: aliceblue;
+    transition: 0.4s;
+    &:focus{
+       outline: none;
+       border-bottom: 1px solid #debb5f;
+       transition: 0.4s;
+    }
+  }
+  &__cart-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 40px;
+  }
+  &__search {
+    max-width: 22px;
+    position: absolute;
+    top: 25%;
+    z-index: 10;
+    right: 20px;
+  }
+  &__cart {
+    max-width: 40px;
+  }
+}

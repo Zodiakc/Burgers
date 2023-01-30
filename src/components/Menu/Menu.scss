@@ -1,0 +1,29 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  justify-content: space-between;
+  height: 70vh;
+  
+  &__img {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  &__title-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item{
+    width: 20%;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+        background-color: #deca88;
+        transition: 0.3s;
+    }
+  }
+}

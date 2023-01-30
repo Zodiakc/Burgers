@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.scss";
+import Header from "./components/Header/Header";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Menu from "./components/Menu/Menu";
 
+import { Pagination } from "@mui/material";
 function App() {
+  const [burgers, setBurgers] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const handlePage = (value) => {
+    setCurrentPage(value);
+  };
+  useEffect(() => {
+    fetch(
+      `https://63d34e6da93a149755a92731.mockapi.io/api/burgers?page=${currentPage}&limit=8`
+    )
+      .then((res) => res.json())
+      .then((json) => setBurgers(json));
+  }, [currentPage]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="dashboard">
+        <Header />
+        <div className="dashboard__wrapper">
+          <Sidebar />
+          <main className="main">
+            <Menu burgers={burgers} />
+            <Pagination
+              className="main__pagination"
+              count={2}
+              defaultPage={1}
+              hideNextButton={true}
+              hidePrevButton={true}
+              onChange={(e) => handlePage(e.target.innerText)}
+            />
+          </main>
+        </div>
+      </div>
     </div>
   );
 }
