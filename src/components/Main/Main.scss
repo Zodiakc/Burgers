@@ -1,0 +1,13 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+    justify-content: space-between;
+    &__pagination{
+      position: absolute;
+      bottom: 20px;
+      left: 45%;
+      
+    }
+  }

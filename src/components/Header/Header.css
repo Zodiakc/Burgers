@@ -1,0 +1,51 @@
+.header {
+  border-bottom: 1px solid #55473a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header__logo {
+  max-width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header__title {
+  font-size: 1.5rem;
+}
+.header__input-wrapper {
+  position: relative;
+}
+.header__input {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 1px solid #55473a;
+  background-color: aliceblue;
+  transition: 0.4s;
+}
+.header__input:focus {
+  outline: none;
+  border-bottom: 1px solid #debb5f;
+  transition: 0.4s;
+}
+.header__cart-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 40px;
+}
+.header__search {
+  max-width: 22px;
+  position: absolute;
+  top: 25%;
+  z-index: 10;
+  right: 20px;
+}
+.header__cart {
+  max-width: 40px;
+}/*# sourceMappingURL=Header.css.map */

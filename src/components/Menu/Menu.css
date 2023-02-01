@@ -1,0 +1,28 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  height: 70vh;
+}
+.menu__img {
+  max-width: 200px;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.menu__title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__item {
+  width: 20%;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.menu__item:hover {
+  background-color: #deca88;
+  transition: 0.3s;
+}/*# sourceMappingURL=Menu.css.map */

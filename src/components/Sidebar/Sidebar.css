@@ -1,0 +1,25 @@
+.sidebar {
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sidebar__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.sidebar__list > li {
+  cursor: pointer;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #55473a;
+  padding-bottom: 10px;
+}
+
+.active {
+  color: #deca88;
+  transition: 0.3s;
+}/*# sourceMappingURL=Sidebar.css.map */

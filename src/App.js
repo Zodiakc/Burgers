@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
-import Menu from "./components/Menu/Menu";
-import { Pagination } from "@mui/material";
+import Main from "./components/Main/Main";
+import Card from "./components/Card/Card";
+
 function App() {
   const [burgers, setBurgers] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [category, setCategory] = useState("");
-  const [search, setSearch] = useState("");
-  const handlePage = (value) => {
-    setCurrentPage(value);
-  };
+  const category = useSelector((state) => state.filter.category);
+  const search = useSelector((state) => state.search.searchValue);
+  const currentPage = useSelector((state) => state.current.currentPage);
+  const card = useSelector((state) => state.card.card);
+
   useEffect(() => {
     fetch(
       `https://63d34e6da93a149755a92731.mockapi.io/api/burgers?page=${currentPage}&limit=8&filter=${category}&search=${search}`
@@ -22,20 +23,11 @@ function App() {
   return (
     <div className="App">
       <div className="dashboard">
-        <Header setSearch={setSearch} />
+        <Header />
         <div className="dashboard__wrapper">
-          <Sidebar setCategory={setCategory} />
-          <main className="main">
-            <Menu burgers={burgers} />
-            <Pagination
-              className="main__pagination"
-              count={2}
-              defaultPage={1}
-              hideNextButton={true}
-              hidePrevButton={true}
-              onChange={(e) => handlePage(e.target.innerText)}
-            />
-          </main>
+          <Sidebar />
+          <Main burgers={burgers} />
+          {card && <Card />}
         </div>
       </div>
     </div>

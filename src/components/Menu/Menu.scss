@@ -16,11 +16,24 @@
     justify-content: space-between;
     align-items: center;
   }
+  &__btn{
+    background-color: #55473a;
+    color: aliceblue;
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px;
+    transition: 0.3s;
+    &:hover{
+     opacity: 0.8;
+     transition: 0.3s;
+    }
+  }
   &__item{
     width: 20%;
     padding: 20px;
     cursor: pointer;
     transition: 0.3s;
+    
     &:hover{
         background-color: #deca88;
         transition: 0.3s;

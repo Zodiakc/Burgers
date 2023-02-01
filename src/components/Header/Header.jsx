@@ -1,8 +1,14 @@
 import React from "react";
+import { useDispatch, useSelector} from "react-redux";
+import { setSearch } from "../../redux/slices/searchSlice";
+import { setCard } from "../../redux/slices/cardSlice";
+
 import "./Header.scss";
-const Header = ({setSearch}) => {
+const Header = () => {
+  const dispatch = useDispatch()
+  const card = useSelector((state) => state.card.card);
   function inputSearch(text){
-      setSearch(text)
+      dispatch(setSearch(text))
   }
   return (
     
@@ -21,7 +27,7 @@ const Header = ({setSearch}) => {
           />
           <img src="images/search.svg" alt="" className="header__search" />
         </div>
-        <img src="images/cart.svg" alt="" className="header__cart" />
+        <img src="images/cart.svg" alt="" className="header__cart" onClick={()=>{dispatch(setCard(!card))}}/>
       </div>
     </header>
   );

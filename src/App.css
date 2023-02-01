@@ -1,22 +1,35 @@
 body {
   background-color: #b88f4d;
 }
+
 * {
   font-family: "Montserrat", sans-serif;
 }
+
 .dashboard {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 90%;
   height: 90%;
   background-color: aliceblue;
   border-radius: 20px;
   box-shadow: 4px 4px 31px 12px rgba(255, 255, 255, 0.37);
   padding: 20px;
-  &__wrapper{
-    display: flex;
-  }
 }
+.dashboard__wrapper {
+  display: flex;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+}
+.main__pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 45%;
+}/*# sourceMappingURL=App.css.map */
