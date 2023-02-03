@@ -1,9 +1,76 @@
-.card{
-    background-color: #deca88;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 50%;
+.card {
+  background-color: #deca88;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  padding: 20px;
+  overflow: scroll;
+  &__padding {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+  }
+  &__item {
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__price-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__btn-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__btn {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  &__order-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__cross{
+    padding: 5px 10px;
+    color: #55473a;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  &__clear{
+    background-color: rgb(116, 12, 12);
+    border: none;
+    color: aliceblue;
+    padding: 10px 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  &__btn-order{
+    width: 40%;
+    padding: 10px 0;
+    align-self: center;
+    background-color: #55473a;
+    color: aliceblue;
+    border: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover{
+        transition: 0.3s;
+        opacity: 0.8;
+    }
+  }
 }

@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector} from "react-redux";
 import { setSearch } from "../../redux/slices/searchSlice";
 import { setCard } from "../../redux/slices/cardSlice";
 
 import "./Header.scss";
 const Header = () => {
+  const [activeSearch, setActiveSearch] = useState(false)
   const dispatch = useDispatch()
   const card = useSelector((state) => state.card.card);
   function inputSearch(text){
       dispatch(setSearch(text))
+  }
+  function openCard(){
+    dispatch(setCard(!card))
   }
   return (
     
@@ -21,13 +25,14 @@ const Header = () => {
         <div className="header__input-wrapper">
           <input
             type="text"
-            className="header__input"
+            className={activeSearch ? "header__input-active" : "header__input"}
             placeholder="Search..."
             onChange={(e)=>{inputSearch(e.target.value)}}
           />
           <img src="images/search.svg" alt="" className="header__search" />
         </div>
-        <img src="images/cart.svg" alt="" className="header__cart" onClick={()=>{dispatch(setCard(!card))}}/>
+        <img src="images/search.svg" alt="" className="header__search-adaptive" onClick={()=>setActiveSearch(!activeSearch)}/>
+        <img src="images/cart.svg" alt="" className="header__cart" onClick={()=>{openCard()}}/>
       </div>
     </header>
   );

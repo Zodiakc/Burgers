@@ -3,40 +3,34 @@
   flex-wrap: wrap;
   gap: 40px;
   padding: 40px;
-  
+
   height: 70vh;
-  
+
   &__img {
     max-width: 200px;
     max-height: 200px;
     object-fit: cover;
   }
-  &__title-block{
+  &__title-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__btn{
+  &__btn {
     background-color: #55473a;
     color: aliceblue;
     cursor: pointer;
     border: none;
     padding: 5px 10px;
     transition: 0.3s;
-    &:hover{
-     opacity: 0.8;
-     transition: 0.3s;
+    &:hover {
+      opacity: 0.8;
+      transition: 0.3s;
     }
   }
-  &__item{
+  &__item {
     width: 20%;
     padding: 20px;
     cursor: pointer;
-    transition: 0.3s;
-    
-    &:hover{
-        background-color: #deca88;
-        transition: 0.3s;
-    }
   }
 }
