@@ -18,11 +18,6 @@ export const cardSlice = createSlice({
     setValue: (state, action) => {
       state.value.push(action.payload);
     },
-    clearValue: (state) => {
-      state.value = [];
-      state.price = 0;
-      state.sum = []
-    },
     deleteCardItem: (state, action) => {
       state.value.splice(action.payload, 1);
     },
@@ -51,6 +46,12 @@ export const cardSlice = createSlice({
     },
     sumCount: (state, action)=>{
       state.sum.push(action.payload)
+    },
+    order: (state)=>{
+      state.sum = []
+      state.value = []
+      state.price = 0
+      state.itemPrice = []
     }
   },
 });
@@ -58,7 +59,7 @@ export const cardSlice = createSlice({
 export const {
   setCard,
   setValue,
-  clearValue,
+  order,
   deleteCardItem,
   countPrice,
   deletePrice,

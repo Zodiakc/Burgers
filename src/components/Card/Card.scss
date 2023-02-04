@@ -12,7 +12,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-   
   }
   &__item {
     background-color: aliceblue;
@@ -38,19 +37,19 @@
     padding: 5px 10px;
     cursor: pointer;
   }
-  &__order-block{
+  &__order-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__cross{
+  &__cross {
     padding: 5px 10px;
     color: #55473a;
     font-size: 1.2rem;
     cursor: pointer;
     font-weight: 700;
   }
-  &__clear{
+  &__clear {
     background-color: rgb(116, 12, 12);
     border: none;
     color: aliceblue;
@@ -58,9 +57,9 @@
     font-size: 1.2rem;
     cursor: pointer;
   }
-  &__btn-order{
+  &__btn-order {
     width: 40%;
-    padding: 10px 0;
+    padding: 10px 5px;
     align-self: center;
     background-color: #55473a;
     color: aliceblue;
@@ -68,9 +67,29 @@
     font-size: 1.2rem;
     transition: 0.3s;
     cursor: pointer;
-    &:hover{
-        transition: 0.3s;
-        opacity: 0.8;
+    &:hover {
+      transition: 0.3s;
+      opacity: 0.8;
+    }
+  }
+}
+@media (max-width: 750px) {
+  .card {
+    &__wrapper {
+      flex-direction: column;
+     
+    }
+  }
+}
+@media (max-width: 450px) {
+  .card {
+    &__wrapper {
+      align-items: flex-start;
+    }
+    &__price-block{
+      gap: 5px;
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 }

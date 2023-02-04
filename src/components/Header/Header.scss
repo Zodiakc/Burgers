@@ -46,6 +46,21 @@
       outline: none;
     }
   }
+  &__circle{
+    background-color: #b97c35;
+    position: absolute;
+    border-radius: 50%;
+    right: 20px;
+    padding: 2px 4px;
+    width: 10px;
+    font-size: 0.8rem;
+    top: 80px;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
   &__cart-wrapper {
     display: flex;
     align-items: center;
@@ -63,6 +78,7 @@
     max-width: 40px;
     cursor: pointer;
   }
+ 
 }
 @media (max-width: 550px) {
   .header{
@@ -82,7 +98,11 @@
     &__title{
       font-size: 1.2rem;
     }
-   
+    &__circle{
+
+      top: 60px;
+    }
   }
   
 }
+

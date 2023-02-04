@@ -11,7 +11,6 @@ const Menu = ({ burgers }) => {
   const dispatch = useDispatch();
   const itemsArr = useSelector((state) => state.card.value);
   const titles = itemsArr.map((i) => i.title);
-  const sum = useSelector((state) => state.card.sum);
   function createItem(item) {
     if (!titles.includes(item.title)) {
       dispatch(setValue(item));
