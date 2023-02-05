@@ -1,11 +1,13 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setCurrentPage } from "../../redux/slices/currentPageSlice";
 import { Pagination } from "@mui/material";
 import Menu from "../Menu/Menu";
-import "./Main.scss"
-const Main = ({ burgers}) => {
-  const dispatch = useDispatch()
+import "./Main.scss";
+const Main = ({ burgers }) => {
+  const dispatch = useDispatch();
+  const amountPage = useSelector((state) => state.current.amountPage);
+  
   const handlePage = (value) => {
     dispatch(setCurrentPage(value));
   };
@@ -14,7 +16,7 @@ const Main = ({ burgers}) => {
       <Menu burgers={burgers} />
       <Pagination
         className="main__pagination"
-        count={2}
+        count={amountPage}
         defaultPage={1}
         hideNextButton={true}
         hidePrevButton={true}

@@ -39,6 +39,7 @@ export const cardSlice = createSlice({
     decrementItemPrice: (state, action) => {
       state.value[action.payload].counter -= 1;
       state.value[action.payload].sum -= state.value[action.payload].price;
+      state.itemPrice.splice(action.payload, 1)
       if (state.value[action.payload].counter <= 1) {
         state.value[action.payload].counter = 1;
         state.value[action.payload].sum = state.value[action.payload].price ;

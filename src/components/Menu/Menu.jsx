@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   setValue,
   countPrice,
-  implementItemPrice,
   sumCount,
 } from "../../redux/slices/cardSlice";
 const Menu = ({ burgers }) => {
@@ -16,7 +15,6 @@ const Menu = ({ burgers }) => {
       dispatch(setValue(item));
       dispatch(countPrice(item.price));
       dispatch(sumCount(item.price));
-
     }
   }
   return (

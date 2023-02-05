@@ -17,7 +17,7 @@ const CardItem = () => {
   const itemPrice = useSelector((state) => state.card.itemPrice);
   const sumArr = useSelector((state) => state.card.sum);
   const sum = sumArr.reduce((acc, item) => acc + item, 0);
- const card = useSelector(state=> state.card.card)
+  const card = useSelector(state=> state.card.card)
 
   let totalSum = Number(sum + Number(totalPrice)).toFixed(2);
   const dispatch = useDispatch();

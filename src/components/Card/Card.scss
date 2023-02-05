@@ -77,7 +77,6 @@
   .card {
     &__wrapper {
       flex-direction: column;
-     
     }
   }
 }
@@ -86,7 +85,7 @@
     &__wrapper {
       align-items: flex-start;
     }
-    &__price-block{
+    &__price-block {
       gap: 5px;
       flex-direction: column;
       align-items: flex-start;
