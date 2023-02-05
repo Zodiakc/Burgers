@@ -27,7 +27,7 @@ const Menu = ({ burgers }) => {
             <span>{item.price} $</span>
           </div>
           <img
-            src="https://madcanon.ru/wp-content/uploads/2022/06/burger.jpg"
+            src={item.img}
             alt="smth"
             className="menu__img"
           />
