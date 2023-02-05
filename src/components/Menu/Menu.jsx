@@ -1,11 +1,7 @@
 import React from "react";
 import "./Menu.scss";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  setValue,
-  countPrice,
-  sumCount,
-} from "../../redux/slices/cardSlice";
+import { setValue, countPrice, sumCount } from "../../redux/slices/cardSlice";
 const Menu = ({ burgers }) => {
   const dispatch = useDispatch();
   const itemsArr = useSelector((state) => state.card.value);
@@ -22,13 +18,19 @@ const Menu = ({ burgers }) => {
       {burgers.map((item) => (
         <div key={item.id} className="menu__item">
           <div className="menu__title-block">
-            <h4>{item.title}</h4>
-            <button className="menu__btn" onClick={() => createItem(item)}>
-              Add
-            </button>
+            <div className="menu__title-wrapper">
+              <h4>{item.title}</h4>
+              <button className="menu__btn" onClick={() => createItem(item)}>
+                Add
+              </button>
+            </div>
             <span>{item.price} $</span>
           </div>
-          <img src={item.img} alt="" className="menu__img" />
+          <img
+            src="https://madcanon.ru/wp-content/uploads/2022/06/burger.jpg"
+            alt="smth"
+            className="menu__img"
+          />
         </div>
       ))}
     </div>

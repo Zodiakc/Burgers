@@ -2,7 +2,7 @@
   padding: 10px 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
  
   
 
@@ -12,8 +12,9 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-   
+    margin-top: auto;
     gap: 50px;
+    margin-top: 200%;
     & > li {
       cursor: pointer;
       font-size: 1.3rem;

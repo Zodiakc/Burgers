@@ -23,7 +23,7 @@ function App() {
     )
       .then((res) => res.json())
       .then((json) => setBurgers(json));
-  }, [currentPage, category, search, limitPage, window]);
+  }, [currentPage, category, search, limitPage]);
 
   return (
     <div className="App">
@@ -32,7 +32,6 @@ function App() {
         <div className="dashboard__wrapper">
           <Sidebar />
           <Main burgers={burgers} />
-          {limitPage}
           {card && <Card />}
         </div>
       </div>

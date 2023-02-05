@@ -3,18 +3,26 @@
   flex-wrap: wrap;
   gap: 40px;
   padding: 40px;
+  justify-content: space-between;
 
-  height: 70vh;
 
   &__img {
     max-width: 200px;
     max-height: 200px;
+    min-width: 100px;
+    min-height: 100px;;
     object-fit: cover;
   }
   &__title-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+  }
+  &__title-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
   &__btn {
     background-color: #55473a;
@@ -32,5 +40,24 @@
     width: 20%;
     padding: 20px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+  }
+}
+
+@media(max-width: 1200px){
+  .menu{
+    &__title-block{
+      flex-direction: column;
+    }
+  }
+}
+@media(max-width: 400px){
+  .menu{
+   
+      flex-direction: column;
+    
   }
 }
