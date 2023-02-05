@@ -5,7 +5,7 @@ import { setLimit } from "../redux/slices/currentPageSlice";
 export function useWindowDimensions() {
   const dispatch = useDispatch();
   const [width, setWidth] = useState(window.innerWidth);
-  const [limitPage, setLimitPage] = useState();
+  const [limitPage, setLimitPage] = useState(Math.trunc(width / 225));
   const updateWidthAndHeight = () => {
     setWidth(window.innerWidth);
     if (width < 1800 && width > 1400) {

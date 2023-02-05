@@ -1,5 +1,5 @@
 {
-  "homepage": "https://zodiack.github.io/burgers",
+  "homepage": "https://Zodiaks.github.io/Burgers",
   "name": "food",
   "version": "0.1.0",
   "private": true,
@@ -23,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "pre-deploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "npm run build && gh-pages -d build",
+
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
