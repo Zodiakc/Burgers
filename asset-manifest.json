@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Burgers/static/css/main.d61e522f.css",
+    "main.js": "/Burgers/static/js/main.bb14d7be.js",
+    "index.html": "/Burgers/index.html",
+    "main.d61e522f.css.map": "/Burgers/static/css/main.d61e522f.css.map",
+    "main.bb14d7be.js.map": "/Burgers/static/js/main.bb14d7be.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d61e522f.css",
+    "static/js/main.bb14d7be.js"
+  ]
+}
