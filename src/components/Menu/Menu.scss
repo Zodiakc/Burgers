@@ -48,6 +48,18 @@
     
   }
 }
+.img-skeleton{
+  animation: skeleton 1s linear infinite alternate;
+  
+}
+@keyframes skeleton{
+  0%{
+    background-color: rgb(173, 172, 172);
+  }
+  100%{
+    background-color: rgb(150, 150, 150);
+  }
+}
 @media(max-width: 1500px){
   .menu{
     &__item{

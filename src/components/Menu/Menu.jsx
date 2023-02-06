@@ -29,7 +29,7 @@ const Menu = ({ burgers }) => {
           <img
             src={item.img}
             alt="smth"
-            className="menu__img"
+            className="menu__img img-skeleton"
           />
         </div>
       ))}

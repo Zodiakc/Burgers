@@ -7,6 +7,7 @@ import Main from "./components/Main/Main";
 import Card from "./components/Card/Card";
 import { useWindowDimensions } from "./hooks/useResize";
 import { setAmountPage } from "./redux/slices/currentPageSlice";
+
 function App() {
   const [burgers, setBurgers] = useState([]);
   const dispatch = useDispatch();
@@ -47,6 +48,7 @@ function App() {
         <div className="dashboard__wrapper">
           <Sidebar />
           <Main burgers={burgers} />
+        
           {card && <Card />}
         </div>
       </div>
