@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   deleteCardItem,
@@ -7,6 +8,7 @@ import {
   sumCount,
   order,
   setCard,
+  setPopap,
 } from "../../../redux/slices/cardSlice";
 import "../Card.scss";
 
@@ -14,7 +16,6 @@ const CardItem = () => {
   const item = useSelector((state) => state.card.value);
   const totalPriceArr = useSelector((state) => state.card.itemPrice);
   const totalPrice = totalPriceArr.reduce((acc, item) => acc + item, 0);
-  const itemPrice = useSelector((state) => state.card.itemPrice);
   const sumArr = useSelector((state) => state.card.sum);
   const sum = sumArr.reduce((acc, item) => acc + item, 0);
   const card = useSelector(state=> state.card.card)
@@ -35,6 +36,10 @@ const CardItem = () => {
   function makeOrder() {
     dispatch(order());
     dispatch(setCard(!card))
+    dispatch(setPopap(true))
+    setTimeout(function(){
+      dispatch(setPopap(false))
+    }, 3000)
   }
 
   return (
@@ -91,6 +96,7 @@ const CardItem = () => {
           </button>
         </div>
       )}
+      
     </div>
   );
 };

@@ -21,5 +21,5 @@ export const currentPageSlice = createSlice({
     }
 })
 
-export const {setCurrentPage, setLimit} = currentPageSlice.actions
+export const {setCurrentPage, setLimit, setAmountPage} = currentPageSlice.actions
 export default currentPageSlice.reducer

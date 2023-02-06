@@ -5,7 +5,8 @@ const initialState = {
   price: 0,
   currIndex: 0,
   itemPrice: [],
-  sum: []
+  sum: [],
+  popap: false,
 };
 
 export const cardSlice = createSlice({
@@ -33,27 +34,28 @@ export const cardSlice = createSlice({
     implementItemPrice: (state, action) => {
       state.value[action.payload].counter += 1;
       state.value[action.payload].sum += state.value[action.payload].price;
-      
-      state.itemPrice.push(state.value[action.payload].price)
+
+      state.itemPrice.push(state.value[action.payload].price);
     },
     decrementItemPrice: (state, action) => {
       state.value[action.payload].counter -= 1;
       state.value[action.payload].sum -= state.value[action.payload].price;
-      state.itemPrice.splice(action.payload, 1)
+      state.itemPrice.splice(action.payload, 1);
       if (state.value[action.payload].counter <= 1) {
         state.value[action.payload].counter = 1;
-        state.value[action.payload].sum = state.value[action.payload].price ;
+        state.value[action.payload].sum = state.value[action.payload].price;
       }
     },
-    sumCount: (state, action)=>{
-      state.sum.push(action.payload)
+    sumCount: (state, action) => {
+      state.sum.push(action.payload);
     },
-    order: (state)=>{
-      state.sum = []
-      state.value = []
-      state.price = 0
-      state.itemPrice = []
-    }
+    order: (state) => {
+      state.sum = [];
+      state.value = [];
+      state.price = 0;
+      state.itemPrice = [];
+    },
+    setPopap: (state, action) => {state.popap = action.payload},
   },
 });
 
@@ -67,6 +69,7 @@ export const {
   changeIndex,
   implementItemPrice,
   decrementItemPrice,
-  sumCount
+  sumCount,
+  setPopap,
 } = cardSlice.actions;
 export default cardSlice.reducer;

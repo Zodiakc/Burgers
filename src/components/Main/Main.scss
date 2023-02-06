@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-  
+    height: 80%;
     justify-content: space-between;
     &__pagination{
       position: absolute;
@@ -11,3 +11,42 @@
       
     }
   }
+
+  .show-popap{
+    background-color: rgba(161, 161, 161, 0.3);
+    height: 60%;
+    width: 50%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: showPopap 3s;
+    backdrop-filter: blur(8px);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-size: 1.5rem;
+    padding: 30px;
+    text-align: center;
+    & > img{
+      max-width: 50px;
+      object-fit: cover;
+    }
+  }
+  .close-popap{
+    display: none;
+  }
+  @keyframes showPopap {
+    0% {
+      display: block;
+    }
+    100% {
+     display: none;
+    }
+  }
+ @media (max-width: 500px){
+  .main__pagination{
+    left: 20%;
+  }
+ } 

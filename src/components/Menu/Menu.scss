@@ -1,7 +1,7 @@
 .menu {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px;
   padding: 40px;
   justify-content: space-between;
 
@@ -10,8 +10,9 @@
     max-width: 200px;
     max-height: 200px;
     min-width: 100px;
-    min-height: 100px;;
+    min-height: 100px;
     object-fit: cover;
+   
   }
   &__title-block {
     display: flex;
@@ -38,15 +39,22 @@
   }
   &__item {
     width: 20%;
+   
     padding: 20px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    justify-content: space-between;
+    gap: 10px;
+    
   }
 }
-
+@media(max-width: 1500px){
+  .menu{
+    &__item{
+       height: 150px;
+    }
+  }
+}
 @media(max-width: 1200px){
   .menu{
     &__title-block{
@@ -54,10 +62,12 @@
     }
   }
 }
-@media(max-width: 400px){
+@media(max-width: 500px){
   .menu{
-   
+      align-items: center;
       flex-direction: column;
-    
+    &__item{
+      height: 50%;
+    } 
   }
 }
