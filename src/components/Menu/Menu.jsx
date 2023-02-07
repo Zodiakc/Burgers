@@ -33,7 +33,7 @@ const Menu = ({ burgers, loading }) => {
               </div>
               <span>{item.price} $</span>
             </div>
-            <img src={item.img} alt="smth" />
+            <img src={item.img} alt="smth" className="menu__img"/>
           </div>
         )
       )}
