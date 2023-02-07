@@ -10,6 +10,7 @@ import { setAmountPage } from "./redux/slices/currentPageSlice";
 
 function App() {
   const [burgers, setBurgers] = useState([]);
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const category = useSelector((state) => state.filter.category);
   const search = useSelector((state) => state.search.searchValue);
@@ -38,17 +39,20 @@ function App() {
       `https://63d34e6da93a149755a92731.mockapi.io/api/burgers?page=${currentPage}&limit=${limitPage}&filter=${category}&search=${search}`
     )
       .then((res) => res.json())
-      .then((json) => setBurgers(json));
+      .then((json) => {
+        setBurgers(json);
+        setLoading(false);
+      });
   }, [currentPage, category, search, limitPage]);
 
   return (
     <div className="App">
-      <div className=  "dashboard">
+      <div className="dashboard">
         <Header />
         <div className="dashboard__wrapper">
           <Sidebar />
-          <Main burgers={burgers} />
-        
+          <Main burgers={burgers} loading={loading} />
+
           {card && <Card />}
         </div>
       </div>
