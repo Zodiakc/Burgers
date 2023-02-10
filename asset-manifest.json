@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Burgers/static/css/main.71a690b5.css",
+    "main.css": "/Burgers/static/css/main.5f7fbbce.css",
     "main.js": "/Burgers/static/js/main.6b445dbf.js",
     "index.html": "/Burgers/index.html",
-    "main.71a690b5.css.map": "/Burgers/static/css/main.71a690b5.css.map",
+    "main.5f7fbbce.css.map": "/Burgers/static/css/main.5f7fbbce.css.map",
     "main.6b445dbf.js.map": "/Burgers/static/js/main.6b445dbf.js.map"
   },
   "entrypoints": [
-    "static/css/main.71a690b5.css",
+    "static/css/main.5f7fbbce.css",
     "static/js/main.6b445dbf.js"
   ]
 }
